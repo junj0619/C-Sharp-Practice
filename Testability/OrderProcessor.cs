@@ -16,6 +16,7 @@ namespace Testability
         {
             if (order.IsShipped)
                 throw new InvalidOperationException("This order is already processed.");
+
             order.Shipment = new Shipment
             {
                 Cost = _shippingCalculator.CalculateShipping(order),
